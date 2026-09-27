@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smear Frames × Motion Blur — Showreel</title>
+    <meta name="description" content="A 15-second, looping motion graphics reel for a three.js WebGPU smear frames and reconstruction motion blur combo." />
+    <script>if (new URLSearchParams(location.search).get('debug') === 'true') document.documentElement.classList.add('debug');</script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preload" href="/fonts/big-shoulders-black.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/azeret-mono-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="is-loading">
+    <canvas id="app"></canvas>
+
+    <div class="hud" aria-hidden="true">
+      <div class="band band--top">
+        <span class="label dim">Motion study / 001</span>
+        <span class="label band__row-2">Smear frames + motion blur</span>
+        <span class="label dim band__row-3" data-readout>Blur 00 px · Smear ×1.00</span>
+        <span class="label dim band__end"><i class="beat" data-beat></i>128 BPM · Loop</span>
+        <span class="timecode band__end band__row-2" data-timecode>00.00 / 15.00</span>
+        <span class="track small dim band__end band__row-3" data-track></span>
+      </div>
+      <div class="band band--bottom" data-caption>
+        <span class="mask label dim"><span data-line>&nbsp;</span></span>
+        <span class="mask caption__title band__row-2"><span data-line>&nbsp;</span></span>
+        <span class="mask dim band__row-3"><span data-line>&nbsp;</span></span>
+        <span class="label credit band__end band__row-2">Rendered live</span>
+        <span class="small dim band__end band__row-3">three.js · WebGPU · TSL</span>
+      </div>
+
+      <div class="split" data-split>
+        <span class="split__label split__label--raw label"><b>A</b> Raw</span>
+        <span class="split__label split__label--fx label"><b>B</b> Smear + blur</span>
+      </div>
+
+      <div class="endcard" data-endcard>
+        <span class="mask endcard__lead"><span data-line>Two effects. One continuous motion.</span></span>
+        <span class="mask label dim"><span data-line>15 seconds · 128 BPM · Real time</span></span>
+      </div>
+    </div>
+
+    <button class="start" type="button" data-start>
+      <span class="start__play" aria-hidden="true"></span>
+      <span class="start__label">Play reel</span>
+      <span class="start__hint">Sound on · 15 s loop</span>
+    </button>
+
+    <p class="page-copy">
+      A 15-second motion graphics reel rendered live with three.js WebGPU and TSL: vertex smear frames
+      along a Bézier fitted to past positions, combined with McGuire reconstruction motion blur.
+    </p>
+
+    <script type="module" src="/src/entry.js"></script>
+  </body>
+</html>
