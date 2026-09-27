@@ -445,7 +445,7 @@ const blurLimitInput = motion.addBinding(params, 'maxBlurPixels', { label: 'stre
 surface.expanded = false
 backdrop.expanded = false
 createDriftpane(pane, { storageNamespace: 'three-starter-smear-frames-v1', width: 300 })
-pane.expanded = false
+pane.expanded = true
 params.maxBlurPixels = THREE.MathUtils.clamp(params.maxBlurPixels, 0, 160)
 params.size = THREE.MathUtils.clamp(params.size, 0.6, 1.5)
 params.travelSpeed = THREE.MathUtils.clamp(params.travelSpeed, 0.25, 7.5)
