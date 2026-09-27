@@ -302,6 +302,7 @@ await Promise.all([soundtrack.ready, document.fonts.ready, renderer.backend.devi
 document.body.classList.toggle('is-still', query.has('still'))
 if (!soundtrack.available) document.querySelector('.start__hint').textContent = '15 s loop'
 else if (query.has('mute')) document.querySelector('.start__hint').textContent = 'Sound off · 15 s loop'
+else document.querySelector('.start__hint').textContent = 'Sound on · 15 s loop'
 setAudioState()
 document.body.classList.remove('is-loading')
 
