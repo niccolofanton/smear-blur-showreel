@@ -1,5 +1,5 @@
 node_modules
 dist
 .DS_Store
-# commercial track: local only, never commit or publish
-public/audio/
+# The full source track is local; only the short loop lives under public/.
+assets/audio/

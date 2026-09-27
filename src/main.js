@@ -22,8 +22,7 @@ import { createVelocitySmear } from './velocitySmear.js'
 
 const query = new URLSearchParams(location.search)
 const forcedSize = query.get('res')?.match(/^(\d+)x(\d+)$/)?.slice(1).map(Number)
-// Builds never ship the commercial track (see vite.config.js), so they skip the request.
-const soundtrack = createSoundtrack({ url: import.meta.env.DEV ? TRACK.url : null, start: TRACK.start, length: LOOP, muted: query.has('mute') })
+const soundtrack = createSoundtrack({ url: TRACK.url, start: TRACK.start, length: LOOP, muted: query.has('mute') })
 
 const canvas = document.querySelector('#app')
 // MSAA on the fullscreen MRT pass blows the 8.3 ms budget at 120 Hz.

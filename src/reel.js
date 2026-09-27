@@ -22,8 +22,8 @@ export const BACKDROPS = {
   acid: { color: new Color(PALETTE.lime), text: PALETTE.ink },
 }
 
-// Matroda 0:44.99–0:59.99, 128 BPM: drop at t = 0, stop → beat 17, fill from beat 28.
-export const TRACK = { url: '/audio/SpotiDownloader.com - About To Lose It - Matroda.mp3', start: 44.99 }
+// Matroda 0:44.99–0:59.99, cut to the 15-second loop shipped with the demo.
+export const TRACK = { url: '/audio/smear-loop.mp3', start: 0 }
 const FILL_HITS = [0, 0.5, 1, 1.5, 2, 2.25, 2.5, 2.75, 3, 3.25, 3.5, 3.75].map((offset) => beat(28 + offset))
 
 // Shots fit a 16×9 unit frame at z = 0 seen from 17 units; frame units have height 1.
